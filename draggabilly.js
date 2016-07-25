@@ -162,7 +162,7 @@ proto.setHandles = function() {
  * @param {Array} args - extra arguments
  */
 proto.dispatchEvent = function( type, event, args ) {
-  var emitArgs = [ event ].concat( args );
+  var emitArgs = [ this, event ].concat( args );
   this.emitEvent( type, emitArgs );
   var jQuery = window.jQuery;
   // trigger jQuery event
